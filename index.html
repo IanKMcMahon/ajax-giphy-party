@@ -7,10 +7,13 @@
 </head>
 
 <body>
-<form id="gifSearch">
-  <input type="text" id="searchBar">
-  <button id="subBtn">Search</button>
-</form>
+  <div class="container">
+    <form class="gif-search">
+      <input type="text" id="search" name="search"
+             placeholder="Enter a search term"/>
+      <input type="submit" class="submit-btn" value="Search Giphy!"/>
+    </form>
+  </div>
 <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
 <script src="https://unpkg.com/axios/dist/axios.js"></script>
 <script src="app.js"></script>
