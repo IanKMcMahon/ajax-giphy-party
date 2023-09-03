@@ -15,7 +15,7 @@ function addGif(res) {
   }
 }
 
-const gifSearch = async function (evt) {
+$("form").on("submit", async function (evt) {
   evt.preventDefault();
 
   let searchTerm = $searchInput.val();
@@ -27,12 +27,10 @@ const gifSearch = async function (evt) {
       api_key: "av67hUKOvNyVSL2l5zZGnvFJopo52tIv",
     },
   });
-  console.log(response.data);
+
   addGif(response.data);
-};
+});
 
 $("#remove").on("click", function () {
   $gifArea.empty();
 });
-
-$("form").addEventListener("submit", gifSearch());
