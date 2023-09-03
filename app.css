@@ -1,0 +1,44 @@
+
+
+body {
+
+background-color: darkslategrey   ;
+}
+
+.btnz {
+    background-color: orange;
+}
+
+#remove {
+    background-color: orangered;
+}
+
+h1 {
+    margin: 10px auto;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    color: slategray;
+}
+
+.container {
+    margin:auto 275px;
+}
+
+.gif-search {
+    margin: 25px auto;
+}
+
+#gif-area {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+
+}
+
+img {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+}
+
