@@ -1,9 +1,23 @@
 const $gifArea = $("#gif-area");
 const $searchInput = $("#search");
 
-async function submitHandler(apiKey, str) {
-  const res = await axios.get(
-    `api.giphy.com/v1/gifs/search", {params: {api_key:${apiKey}, q:${str}}`
-  );
-  console.log(res);
-}
+$("form").on("submit", async function (evt) {
+  evt.preventDefault();
+
+  let searchTerm = $searchInput.val();
+  $searchInput.val("");
+
+  const response = await axios.get("http://api.giphy.com/v1/gifs/search", {
+    params: {
+      q: searchTerm,
+      api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym",
+    },
+  });
+  addGif(response.data);
+});
+
+/* remove gif */
+
+$("#remove").on("click", function () {
+  $gifArea.empty();
+});
