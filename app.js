@@ -10,13 +10,11 @@ $("form").on("submit", async function (evt) {
   const response = await axios.get("http://api.giphy.com/v1/gifs/search", {
     params: {
       q: searchTerm,
-      api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym",
+      api_key: "av67hUKOvNyVSL2l5zZGnvFJopo52tIv",
     },
   });
   addGif(response.data);
 });
-
-/* remove gif */
 
 $("#remove").on("click", function () {
   $gifArea.empty();
